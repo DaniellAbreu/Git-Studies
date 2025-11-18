@@ -3,6 +3,7 @@ git push origin your-feature-branch
 git checkout -b your-feature-branch
 git reset --soft HEAD~1
 git reset <file>
+git push --set-upstream origin your-feature-branch
 
 // For Creating Pull Requests Using GitHub CLI
 gh pr create --base main --head your-feature-branch --title "Your Pull Request Title" --body "Description of your changes"
