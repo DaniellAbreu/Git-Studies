@@ -1,17 +1,33 @@
 // Commands
+
+// Push Commits to Remote
 git push origin your-feature-branch
+
+// Creating Branches
 git checkout -b your-feature-branch
+
+// Reset to Previous Commit and Points the Head one Step Back (Keeps the Changes from [add] staged)
 git reset --soft HEAD~1
+
+// Undo Staged Files
 git reset <file>
+
+// Undo Specified Staged File
+git restore --staged <file>
+
+// Push Command for a Newly Created Repository
 git push --set-upstream origin your-feature-branch
+
+// Removing Directories in Github Remote Only
+git rm -r --cached <folder/sub-folder>
 
 // For Creating Pull Requests Using GitHub CLI
 gh pr create --base main --head your-feature-branch --title "Your Pull Request Title" --body "Description of your changes"
 
-// Merging using Git
+// Merging Using Git
 git fetch origin pull/<pull-request-number>/head:pr-branch
 git checkout main
 git merge pr-branch
 
-// using GitHub CLI
+// Using GitHub CLI
 gh pr merge <pull-request-number>
